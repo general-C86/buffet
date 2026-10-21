@@ -94,6 +94,57 @@
                 </aside>
 
             </div>
+
+            <!-- Чек заказа -->
+            <section class="receipt" aria-labelledby="receipt-title">
+
+                <div class="receipt-success-icon">
+                    <img
+                        src="img/галочка.png" alt="галочка" class="receipt-success-image"
+                    >
+                </div>
+
+                <h2 class="receipt-title" id="receipt-title">
+                    Заказ оформлен!
+                </h2>
+
+                <!-- Список товаров -->
+                <div class="receipt-details">
+                    <div class="receipt-items">
+                        <div class="receipt-item">
+                            <span class="receipt-item-name">
+                                Круассан с шоколадом (2шт)
+                            </span>
+                            <span class="receipt-item-dots" aria-hidden="true"></span>
+                            <span class="receipt-item-price">298₽</span>
+                        </div>
+                        <div class="receipt-item">
+                            <span class="receipt-item-name">
+                                Кофе «Американо» (2шт)
+                            </span>
+                            <span class="receipt-item-dots" aria-hidden="true"></span>
+                            <span class="receipt-item-price">298₽</span>
+                        </div>
+                    </div>
+
+                    <!-- Итог заказа -->
+                    <div class="receipt-summary">
+                        <div class="receipt-count">
+                            <span class="receipt-label">Всего товаров:</span>
+                            <span class="receipt-count-value">4 шт.</span>
+                        </div>
+                        <div class="receipt-total">
+                            <span class="receipt-total-label">Итого:</span>
+                            <span class="receipt-total-price">596₽</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="index.html" class="receipt-done-button">
+                    Готово
+                </a>
+            </section>
+
         </div>
     </main>
 </body>
