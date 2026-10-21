@@ -630,7 +630,8 @@ li {
     display: none;
 }
 .auth-modal {
-    background: linear-gradient(90deg, #3A5EC3, #4980AB, #569E95);
+    position: relative;
+    background: transparent;
     padding: 35px 120px;
     border-radius: 15px;
     text-align: center;
@@ -640,6 +641,17 @@ li {
     align-items: center;
     gap: 15px;
     user-select: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.auth-modal::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(90deg, #3A5EC3, #4980AB, #569E95);
+    border-radius: inherit;
+    z-index: -1;
 }
 .auth-modal input {
     width: 280px;
