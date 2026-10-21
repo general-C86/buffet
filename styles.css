@@ -4,6 +4,9 @@ body {
     margin: 0;
     padding: 0;
 }
+body.no-scroll {
+    overflow: hidden;
+}
 .container {
     max-width: 1075px;
     margin-left: auto;
@@ -608,3 +611,100 @@ li {
     color: white;
   }
 } */
+
+.auth-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    pointer-events: auto;
+}
+.auth-overlay.hidden {
+    display: none;
+}
+.auth-modal {
+    background: linear-gradient(90deg, #3A5EC3, #4980AB, #569E95);
+    padding: 35px 120px;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    user-select: none;
+}
+.auth-modal input {
+    width: 280px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+}
+.auth-modal button {
+    position: relative;
+    width: 280px;
+    padding: 12px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-weight: bold;
+    overflow: hidden;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Сам блик */
+.auth-modal button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+.auth-modal button:hover::before {
+    left: 100%;
+}
+.auth-modal button:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+.auth-modal button:active {
+    transform: scale(0.97);
+}
+.auth-modal h2 {
+    margin: 0;
+    font-size: 20px;
+}
+.auth-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+.auth-label {
+    color: #fff;
+    font-size: 15px;
+    white-space: nowrap;
+}
+.auth-field input {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
