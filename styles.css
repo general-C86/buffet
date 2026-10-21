@@ -144,7 +144,7 @@ li {
   background:#ffffff; 
 }
 .basket-container { 
-  max-width:768px; 
+  max-width:1075px; 
   padding-top:48px; 
   padding-bottom:60px; 
   
@@ -178,7 +178,7 @@ li {
 
 .basket-content {
     display: grid;
-    grid-template-columns: minmax(0, 438px) minmax(220px, 250px);
+    grid-template-columns: minmax(0, 1.7fr) minmax(220px, 1fr);
     align-items: start;
     gap: 43px;
 }
