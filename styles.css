@@ -60,17 +60,85 @@ li {
     background: linear-gradient(90deg, #3A5EC3, #4980AB, #569E95);
     color: #fff;
     font-size: 15px;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 5px;
     padding: 10px 60px;
     cursor: pointer;
     align-items: center;
     gap: 8px;
     justify-content: center;
+    transition: transform 0.2s ease;
+
 }
+
+.button:hover {
+    transform: scale(1.04);
+}
+
+.button:active {
+    transform: scale(0.96);
+}
+
 .img-shop {
     width: 17px;
     height: auto;
+}
+
+
+/* ID сотрудника и кнопка перезагрузки */
+
+.menu-user-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.menu-user-top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 48px;
+    margin-right:25px
+}
+
+.menu-user-id {
+    color: #111;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.menu-refresh-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #111;
+    cursor: pointer;
+}
+
+.menu-refresh-icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    flex-shrink: 0;
+    transition: transform 0.5s ease;
+}
+
+.menu-refresh-button:hover .menu-refresh-icon {
+    transform: rotate(150deg);
+}
+
+/* При нажатии */
+.menu-refresh-button:active .menu-refresh-icon {
+    transform: scale(0.8);
+    transition: transform 0.1s ease;
 }
 
 .cart-link{
@@ -402,8 +470,8 @@ li {
     width: 100%;
     min-height: 232px;
     padding: 27px 18px 24px;
-    border: 1px solid #bcbcbc;
-    background: #fdfbfb;
+    border: 1px solid #d5d5d5;
+    background: #fff;
 }
 
 .order-total,
@@ -516,6 +584,11 @@ li {
 .ripple-button span {
     position: relative;
     z-index: 1;
+}
+.ripple-button {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
 }
 
 /* Запуск анимации */
