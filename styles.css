@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 body {
-    font-family:  "Inter", sans-serif;
+    font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
 }
+
 body.no-scroll {
     overflow: hidden;
 }
+
 .container {
     max-width: 1075px;
     margin-left: auto;
@@ -14,10 +17,12 @@ body.no-scroll {
     padding-left: 20px;
     padding-right: 20px;
 }
+
 .bunner {
     width: 100%;
     height: auto;
 }
+
 .menu {
     display: flex;
     list-style: none;
@@ -27,7 +32,7 @@ body.no-scroll {
     margin-bottom: 30px;
 }
 
-.menu-tabs{
+.menu-tabs {
     display: flex;
     gap: 20px;
     list-style: none;
@@ -35,26 +40,31 @@ body.no-scroll {
     opacity: 70%;
     margin: 0;
 }
+
 ul.menu-tabs {
     padding-left: 10px;
     padding-top: 15px;
 }
-li:hover{
+
+li:hover {
     color: #41948a;
     cursor: pointer;
     border-bottom-color: #569E95;
 }
+
 li {
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
     transition: color 0.3s, border-color 0.3s;
 }
+
 .menu-title {
     color: #000000;
     font-size: 32px;
     font-weight: 700;
     margin: 0;
 }
+
 .button {
     display: flex;
     background: linear-gradient(90deg, #3A5EC3, #4980AB, #569E95);
@@ -84,9 +94,7 @@ li {
     height: auto;
 }
 
-
-/* ID сотрудника и кнопка перезагрузки */
-
+/* Контейнер ID и кнопок */
 .menu-user-actions {
     display: flex;
     flex-direction: column;
@@ -94,20 +102,58 @@ li {
     gap: 16px;
 }
 
+/* ID сотрудника */
 .menu-user-top {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 48px;
-    margin-right:25px
 }
 
-.menu-user-id {
-    color: #111;
-    font-size: 20px;
-    font-weight: 500;
-    white-space: nowrap;
-    margin-right: 30px;
+.menu-user-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.menu-user-buttons .button {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex: 0 0 198px;
+    width: 198px;
+    height: 35px;
+    padding: 0 16px;
+    margin: 0;
+
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: linear-gradient(90deg, #3A5EC3, #569E95);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+
+    font-family: inherit;
+    font-size: 12px;
+    text-decoration: none;
+
+    transition: transform 0.2s ease;
+}
+
+.menu-user-buttons .img-shop {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.menu-user-buttons .button:hover {
+    transform: scale(1.04);
+}
+
+.menu-user-buttons .button:active {
+    transform: scale(0.96);
 }
 
 .menu-refresh-button {
@@ -136,15 +182,15 @@ li {
     transform: rotate(150deg);
 }
 
-/* При нажатии */
 .menu-refresh-button:active .menu-refresh-icon {
     transform: scale(0.8);
     transition: transform 0.1s ease;
 }
 
-.cart-link{
+.cart-link {
     text-decoration: none;
 }
+
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -152,6 +198,7 @@ li {
     margin-top: 30px;
     margin-bottom: 50px;
 }
+
 .card {
     border: 1px solid #848484;
     border-radius: 12px;
@@ -159,68 +206,75 @@ li {
     display: flex;
     flex-direction: column;
 }
+
 .card-image {
-  background-color: #D1D5DB;
-  height: 200px;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #AFAFAF;
-}
-.card-image img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-}
-.card-title {
-  color: #000000;
-  font-size: 16px;
-  font-weight: 500;
-  opacity: 70px;
-  margin-bottom: 8px;
-}
-.card-price {
-  color: #000000;
-  font-size: 25px;
-  font-weight: 700;
-  margin: 0;
-  margin-bottom: 16px;
-  
-}
-.card-btn {
-  background: transparent;
-  color: #000000;
-  border: 1px solid #4B4B4B;
-  border-radius: 6px;
-  padding: 10px;
-  cursor: pointer;
-  width: 100%;
-  transition: 0.2s;
-}
-.card-btn:hover {
-  background-color: #41948a;
-  border-color: #ffffff;
-  color: white;
+    background-color: #D1D5DB;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #AFAFAF;
 }
 
+.card-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 70px;
+    margin-bottom: 8px;
+}
+
+.card-price {
+    color: #000000;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 16px;
+
+}
+
+.card-btn {
+    background: transparent;
+    color: #000000;
+    border: 1px solid #4B4B4B;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.card-btn:hover {
+    background-color: #41948a;
+    border-color: #ffffff;
+    color: white;
+}
 
 
 
 
 /* КОРЗИНА */
-.basket-page { 
-  min-height:100vh; 
-  color:#303030; 
-  background:#ffffff; 
+.basket-page {
+    min-height: 100vh;
+    color: #303030;
+    background: #ffffff;
 }
-.basket-container { 
-  max-width:1075px; 
-  padding-top:48px; 
-  padding-bottom:60px; 
-  
+
+.basket-container {
+    max-width: 1075px;
+    padding-top: 48px;
+    padding-bottom: 60px;
+
 }
+
 .basket-header {
     margin-bottom: 46px;
 }
@@ -298,24 +352,26 @@ li {
     padding: 5px 0;
     border: 0;
     background: transparent;
-    color: #aaa;
+    opacity: 60%;
     font: inherit;
     font-size: 11px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: color .2s ease;
+    transition: 0.2s ease;
 }
 
 .clear-cart:hover {
-    color: #3a5ec3;
+    opacity: 100%;
 }
 
 .clear-cart-icon {
-    width: 9px;
-    height: 9px;
     object-fit: contain;
     opacity: 66%;
 }
+
+/* .clear-cart-icon:hover{
+    opacity: 100%;
+} */
 
 .cart-items-list {
     padding: 23px 17px 22px 26px;
@@ -375,7 +431,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 30px 0 0 ;
+    margin: 30px 0 0;
     width: 60px;
     height: 20px;
     border: 1px solid #ddd;
@@ -446,10 +502,17 @@ li {
 
 .remove-item-icon {
     display: block;
-    width: 17px;
-    height: 17px;
+    opacity: 50%;
     object-fit: contain;
+    transition: 0.2s ease;
+
 }
+
+.remove-item-icon:hover {
+    opacity: 100%;
+}
+
+
 
 .basket-item-total {
     margin: 17px 0 0;
@@ -535,7 +598,7 @@ li {
     outline-color: #3a5ec3;
     background: #fff;
     color: #777;
-    font-family:   "Inter", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 12px;
 }
 
@@ -555,6 +618,7 @@ li {
     cursor: pointer;
     transition: background .25s ease, box-shadow .25s ease;
 }
+
 /* Основа эффекта ряби */
 .checkout-button {
     position: relative;
@@ -587,6 +651,7 @@ li {
     position: relative;
     z-index: 1;
 }
+
 .ripple-button {
     position: relative;
     overflow: hidden;
@@ -611,21 +676,70 @@ li {
 }
 
 @media (max-width:760px) {
- .basket-container { padding-top:30px; }
- .basket-header { margin-bottom:30px; }
- .basket-content { grid-template-columns:minmax(0,1fr); gap:24px; }
- .order-summary { max-width:none; }
+    .basket-container {
+        padding-top: 30px;
+    }
+
+    .basket-header {
+        margin-bottom: 30px;
+    }
+
+    .basket-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .order-summary {
+        max-width: none;
+    }
 }
+
 @media (max-width:480px) {
- .basket-container { padding-left:14px; padding-right:14px; }
- .cart-panel-header { padding-left:14px; padding-right:12px; }
- .cart-items-list { padding:16px 12px; }
- .basket-item { grid-template-columns:76px minmax(0,1fr) 39px; gap:9px; }
- .basket-item-image { width:76px; height:62px; }
- .basket-item-details { grid-column:3; grid-row:1; }
- .quantity-counter { grid-column:2; grid-row:2; justify-content:flex-start; margin-top:0; width:max-content; }
- .basket-item-info { grid-column:2; grid-row:1; }
- .basket-item-title { font-size:9px; }
+    .basket-container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .cart-panel-header {
+        padding-left: 14px;
+        padding-right: 12px;
+    }
+
+    .cart-items-list {
+        padding: 16px 12px;
+    }
+
+    .basket-item {
+        grid-template-columns: 76px minmax(0, 1fr) 39px;
+        gap: 9px;
+    }
+
+    .basket-item-image {
+        width: 76px;
+        height: 62px;
+    }
+
+    .basket-item-details {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .quantity-counter {
+        grid-column: 2;
+        grid-row: 2;
+        justify-content: flex-start;
+        margin-top: 0;
+        width: max-content;
+    }
+
+    .basket-item-info {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .basket-item-title {
+        font-size: 9px;
+    }
 }
 
 
@@ -832,6 +946,8 @@ li {
     /* ID сотрудника */
     .menu-user-id {
         color: #F2F2F2;
+        font-size: 20px;
+        margin-right: 60px;
     }
 
     /* Кнопки в шапке */
@@ -910,9 +1026,11 @@ li {
     z-index: 9999;
     pointer-events: auto;
 }
+
 .auth-overlay.hidden {
     display: none;
 }
+
 .auth-modal {
     position: relative;
     background: transparent;
@@ -937,6 +1055,7 @@ li {
     border-radius: inherit;
     z-index: -1;
 }
+
 .auth-modal input {
     width: 280px;
     padding: 12px 15px;
@@ -945,6 +1064,7 @@ li {
     box-sizing: border-box;
     outline: none;
 }
+
 .auth-modal button {
     position: relative;
     width: 280px;
@@ -967,38 +1087,43 @@ li {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        120deg, 
-        transparent, 
-        rgba(255, 255, 255, 0.4), 
-        transparent
-    );
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.4),
+            transparent);
     transition: left 0.6s ease;
 }
+
 .auth-modal button:hover::before {
     left: 100%;
 }
+
 .auth-modal button:hover {
     background: rgba(255, 255, 255, 0.25);
 }
+
 .auth-modal button:active {
     transform: scale(0.97);
 }
+
 .auth-modal h2 {
     margin: 0;
     font-size: 20px;
 }
+
 .auth-field {
     display: flex;
     align-items: center;
     gap: 10px;
     margin: 15px 0;
 }
+
 .auth-label {
     color: #fff;
     font-size: 15px;
     white-space: nowrap;
 }
+
 .auth-field input {
     flex: 1;
     padding: 10px;
@@ -1055,6 +1180,7 @@ li {
     max-width: 400px;
     margin-top: 20px;
 }
+
 .receipt-items {
     width: 100%;
     display: flex;
