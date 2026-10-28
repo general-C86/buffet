@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="index.css">
     <title>Студенческий Буфет | НПК </title>
 </head>
 
@@ -18,9 +18,12 @@
             <div>
                 <h1 class="menu-title">МЕНЮ</h1>
                 <ul class="menu-tabs">
-                    <li>Новинки</li>
-                    <li>Выпечка</li>
-                    <li>Напитки</li>
+                    <a href="#" data-category="all" class="active">Все</a>
+                    <a href="#" data-category="Выпечка">Выпечка</a>
+                    <a href="#" data-category="Десерты">Десерты</a>
+                    <a href="#" data-category="Напитки">Напитки</a>
+                    <a href="#" data-category="Заготовки">Заготовки</a>
+                    <a href="#" data-category="Полуфабрикаты">Полуфабрикаты</a>
                 </ul>
             </div>
 
@@ -35,81 +38,18 @@
                         Заказы
                     </a>
 
-                    <a href="basket.html" class="button cart-link">
-                        Корзина
-                        <img src="img/bigshop.png" alt="" class="img-shop">
-                    </a>
+                <a href="basket.html" class="button cart-link">
+                    Корзина
+                    <span class="cart-count hidden" id="cartCount">0</span>
+                    <img src="img/bigshop.png" alt="" class="img-shop">
+                </a>
+
                 </div>
             </div>
         </div>
         <div class="content">
-            <div class="cards-grid">
-                <!-- Карточка 1 -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="" alt="Вкусняшка">
-                    </div>
-                    <div class="card-conetent">
-                        <h3 class="card-title">Какая-то вкусняшка</h3>
-                        <p class="card-price">319 ₽</p>
-                        <button class="card-btn">В корзину</button>
-                    </div>
-                </div>
-                <!-- Карточка 2 -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="" alt="Вкусняшка">
-                    </div>
-                    <div class="card-conetent">
-                        <h3 class="card-title">Какая-то вкусняшка</h3>
-                        <p class="card-price">319 ₽</p>
-                        <button class="card-btn">В корзину</button>
-                    </div>
-                </div>
-                <!-- Карточка 3 -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="" alt="Вкусняшка">
-                    </div>
-                    <div class="card-conetent">
-                        <h3 class="card-title">Какая-то вкусняшка</h3>
-                        <p class="card-price">319 ₽</p>
-                        <button class="card-btn">В корзину</button>
-                    </div>
-                </div>
-                <!-- Карточка 4 -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="" alt="Вкусняшка">
-                    </div>
-                    <div class="card-conetent">
-                        <h3 class="card-title">Какая-то вкусняшка</h3>
-                        <p class="card-price">319 ₽</p>
-                        <button class="card-btn">В корзину</button>
-                    </div>
-                </div>
-                <!-- Карточка 5 -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="" alt="Вкусняшка">
-                    </div>
-                    <div class="card-conetent">
-                        <h3 class="card-title">Какая-то вкусняшка</h3>
-                        <p class="card-price">319 ₽</p>
-                        <button class="card-btn">В корзину</button>
-                    </div>
-                </div>
-                <!-- Карточка 6 -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="" alt="Вкусняшка">
-                    </div>
-                    <div class="card-conetent">
-                        <h3 class="card-title">Какая-то вкусняшка</h3>
-                        <p class="card-price">319 ₽</p>
-                        <button class="card-btn">В корзину</button>
-                    </div>
-                </div>
+            <div class="cards-grid" id="menuCards">
+               
             </div>
         </div>
     </div>
